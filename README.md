@@ -1,6 +1,6 @@
 # Testing emails during development
 
-Example application created in combination with the [blog post](http://www.devexp.eu/2017/06/06/testing-emails-during-development/ "blog post"), to show how easily one can test emails with Say hello to [MailDev](https://github.com/djfarrelly/MailDev "MailDev") and some [Docker](https://www.docker.com/ "Docker") magic.
+Example application created in combination with http://www.devexp.eu/2017/06/06/testing-emails-during-development/, to show how easily one can test emails with [MailDev](https://github.com/djfarrelly/MailDev "MailDev") and some [Docker](https://www.docker.com/ "Docker") magic.
 
 ## Run the app
 
