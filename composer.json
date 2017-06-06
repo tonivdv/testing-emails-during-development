@@ -1,0 +1,13 @@
+{
+    "name": "toni/test-emails-during-development",
+    "authors": [
+        {
+            "name": "Toni Van de Voorde",
+            "email": "toni.vdv@gmail.com"
+        }
+    ],
+    "require": {
+        "silex/silex": "~2.0",
+        "swiftmailer/swiftmailer": "^5.4"
+    }
+}

@@ -1,0 +1,49 @@
+version: '2'
+
+services:
+
+  nginx:
+      build: docker/nginx
+      ports:
+          - 8080:80
+      volumes:
+        - .:/src
+      networks:
+          - backend-tier
+      depends_on:
+          - php
+
+  php:
+      image: php:7.1-fpm
+      expose:
+          - 9000
+      volumes:
+          - .:/src
+      networks:
+          backend-tier:
+            aliases:
+              - my_php
+
+  composer:
+      image: composer
+      volumes:
+          - composer-data:/composer
+          - .:/app
+
+  fakesmtp:
+      image: djfarrelly/maildev
+      ports:
+        - 25
+        - 8081:80
+      networks:
+        backend-tier:
+          aliases:
+            - my_fakesmtp
+
+volumes:
+  composer-data:
+    driver: local
+
+networks:
+  backend-tier:
+    driver: bridge
